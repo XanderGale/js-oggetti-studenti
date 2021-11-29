@@ -54,8 +54,6 @@ function pushNew(){
         studentEta: addEta
     };
     
-    console.log(newStudent.studentName);
-
     students.push(newStudent);
 }
 
