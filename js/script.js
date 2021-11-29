@@ -23,9 +23,9 @@
 const students =
 [
     {
-    studentName: 'Alessandro',
-    studentSurname: 'Galeazzi',
-    studentEta: 25
+        studentName: 'Alessandro',
+        studentSurname: 'Galeazzi',
+        studentEta: 25
     },
     {
         studentName: 'Giuseppe',
@@ -39,11 +39,32 @@ const students =
     },
 ];
 
-for (let i = 0; i < students.length; i++){    
-    alert(`
-    Nome: ${students[i].studentName}
-    Cognome: ${students[i].studentSurname}
-    Età: ${students[i].studentEta}
-    `)
+// Step 3
+
+function pushNew(){
+
+    const addName = prompt('Inserisci il nome del nuovo studente:');
+    const addSurname = prompt('Inserisci il cognome del nuovo studente');
+    const addEta = parseInt(prompt('Inserisci l\'età del nuovo studente'));
+
+    const newStudent = 
+    {
+        studentName: addName,
+        studentSurname: addSurname,
+        studentEta: addEta
+    };
+    
+    console.log(newStudent.studentName);
+
+    students.push(newStudent);
 }
 
+function showStudents(){
+    for (let i = 0; i < students.length; i++){
+        alert(`
+        Nome: ${students[i].studentName}
+        Cognome: ${students[i].studentSurname}
+        Età: ${students[i].studentEta}
+        `)
+    };
+}
